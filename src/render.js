@@ -44,7 +44,16 @@ export const renderNode = (
     }
   });
   if (node.style && inlineRenderers[node.style]) {
-    return inlineRenderers[node.style](checkJoin(children, options), { key: keyGenerator() });
+    return inlineRenderers[node.style](checkJoin(children, options), {
+      key: keyGenerator(),
+      style: node.style,
+    });
+  }
+  if (node.style && inlineRenderers.$unmatched) {
+    return inlineRenderers.$unmatched(checkJoin(children, options), {
+      key: keyGenerator(),
+      style: node.style,
+    });
   }
   if (node.entity !== null) {
     const entity = entityMap[node.entity];

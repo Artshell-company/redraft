@@ -1,6 +1,6 @@
 {
-  "name": "@mikamai-linkme/redraft",
-  "version": "0.10.3",
+  "name": "@artshell/redraft",
+  "version": "1.0.0",
   "description": "[FORK OF redraft] Renders the result of Draft.js convertToRaw using provided callbacks, works well with React",
   "main": "./lib/index.js",
   "scripts": {
